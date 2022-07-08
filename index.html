@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ALERT_MESSAGE</title>
+</head>
+<body>
+    <form name="my_form" method="post" onsubmit="return alarm()">
+        NAME :<input  id="inp" type="text"><br><br>
+        GENDER :<select id ="ge">
+            <option>select the gender below</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>prefer not to say</option>
+        </select><br><br>
+        SUBMIT : <button type="submit">click to submit</button><br><br>
+    </form>
+    <script>
+        function alarm(){
+            let na_me = document.getElementById("inp").value;
+            let gen = document.getElementById("ge").value;
+            if(na_me=="" || gen==""){
+                alert("enter name correctly");
+                return false;
+                event.preventDefault();
+            }
+            alert("Sona College of Technology");  
+        }
+    </script>
+</body>
+</html>

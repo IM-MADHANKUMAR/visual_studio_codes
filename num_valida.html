@@ -1,0 +1,27 @@
+<HTML>
+    <HEAD>
+        <TITLE>
+            WEB PAGE DESIGN WITH JAVA SCRIPT
+        </TITLE>
+    </HEAD>
+    <BODY>
+        <FORM name="form1" method="post" onsubmit="return validate()">
+            <H1>NUMBER CHECKING FOR ASCENDING</H1>
+            NUMBER :<INPUT type="text" id="num" maxlength="4"/>
+            <button type="submit">submit</button>
+        </FORM>
+        <SCRIPT>
+            function validate()
+            { 
+                var number = document.getElementById("num").value;
+                for(var i =1;i<number.length;i++){
+                    if(+number.charAt(i) < +number.charAt(i-1)){
+                        document.writeln("NOT VALID");
+                        return;
+                    }
+                }
+            document.writeln("VALID");
+            }
+        </SCRIPT>
+    </BODY>      
+</HTML>
